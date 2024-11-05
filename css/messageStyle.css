@@ -1,0 +1,27 @@
+#feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    grid-column: 1/9;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+}
+.message {
+    padding : 1rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 1rem;
+    gap: .5rem;
+    min-width: 300px;
+}
+.message h3, .message p {
+    margin-bottom: 12px;
+}
+.message h3 {
+    margin-top: 12px;
+    font-weight: 500;
+}
+.message p {
+    white-space: pre-wrap;
+}

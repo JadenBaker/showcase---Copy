@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Developer Portfolio Showcase Homepage">
+        <title>JB ~ Web Developer</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./css/cardAnimation.css">
+        <link rel="stylesheet" type="text/css" href="./css/showModal.css">
+        <script src="https://kit.fontawesome.com/3fef7db2e3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <p>Jaden Baker</p>
+            <nav>
+                <span>
+                    <i class="fa-solid fa-book-journal-whills"></i>
+                    <a href="story.html" id="storyBtn">My Story</a>
+                </span>
+                <span>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="works.html" id="storyBtn">Works</a>
+                </span>
+                <span>
+                    <i class="fa-regular fa-address-book"></i>
+                    <button id="contactBtn">Contact</button>
+                </span>
+            </nav>
+        </header>
+        <main>
+            <section id="sectionOne" >
+                <div>
+                    <h1>Designer, Developer, & Thinker</h1>
+                    <p>
+                        I love nature & our beautiful planet that we all call home.
+                        I am a computer scientist and I specialize in designing 
+                        & building user interfaces for a great user experience.
+                    </p>
+                </div>
+            </section>
+            <section id="sectionTwo">
+                <div class="container">
+                    <h2>Skills & Experience</h2>
+                    <div class="selectorComp">
+                        <select id="skillSelector">
+                            <option value="js">Javascript</option>
+                            <option value="py">Python</option>
+                            <option value="c++">Low Level</option>
+                            <option value="db">DB / Storage</option>
+                            <option value="other">More Skills</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-left" id="leftArrow"></i>
+                        <i class="fa-solid fa-chevron-right" id="rightArrow"></i>
+                    </div>
+                </div>
+                <ul class="slider">
+                </ul>
+            </section>
+            <section id="sectionThree">
+                <h3>Case Studies</h3>
+
+                <ul>
+                    <!-- <li class="workWrapper">
+                        <div class="upperFlex">
+                            <div class="upperFlexLeft">
+                                <h4 class="title">Project Title</h4>
+                                <p class="description">
+                                    Project Description, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Itaque nam illo at? Quae eligendi sapiente sequi aut, odio velit modi expedita 
+                                    iure illum sunt non voluptatibus sit amet incidunt laudantium! Lorem ipsum dolor 
+                                    sit amet consectetur adipisicing elit. Voluptate nostrum architecto, 
+                                    voluptatum est reprehenderit nemo placeat exercitationem consequatur qui 
+                                    illum accusantium dolores iste porro nam, in harum rem magnam possimus.
+                                </p>
+                                <p>Requirements</p>
+                                <ul class="requirementsList">
+                                    <li>Requirement 1</li>
+                                    <li>Requirement 2</li>
+                                    <li>Requirement 3</li>
+                                </ul>
+                            </div>
+                            <div class="upperFlexRight">
+                                <img src="./assets/warmwh.jpg" alt="Project Image" class="productImage">
+                            </div>
+                        </div>
+                        <div class="lowerFlex">
+                            <div class="results">
+                                <p class="resultsTitle">Results</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius minima aut illo, at repellat, ratione quod ullam nisi minus quae fuga iste placeat dignissimos natus tempora voluptate, dolorum nemo voluptatem!
+                                </p>
+                            </div>
+                            <div class="technologies">
+                                <p class="techTitle">Technologies Used</p>
+                                <div class="client">
+                                    next.js
+                                </div>
+                                <div class="apis">
+                                    stripe
+                                </div>
+                                <div class="server">
+                                    server tech 1
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+                
+                <div id="moreWorksLink">
+                    <a>View More Works</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </section>
+            <section id="sectionFour">
+                <h4>I am open to...</h4>
+                <ul class="cards-list">
+                    <li class="card-item">
+                        <div class="card" id="card1">
+                            <div class="card-front">
+                                <p>Creating a company</p>
+                                <i class="fa-regular fa-building" id="buildIcon"></i>
+                            </div>
+                            <div class="card-back">I am mainly interested in creating 
+                                a software as a service (SaaS) company. I am interested
+                                in AI and I am always willing to listen to an idea.
+        
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card" id="card2">
+                            <div class="card-front">
+                                <p>Working as a developer</p>
+                                <i class="fa-solid fa-users" id="employeeIcon"></i>
+                            </div>
+                            <div class="card-back"> I can work remote, or in person
+                                and I'm willing to relocate. I would personally really
+                                like to work at spacex in Texas someday. 
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card" id="card3">
+                            <div class="card-front">
+                                <p>Working as a freelance developer</p>
+                                <i class="fa-solid fa-user-tie" id="freelanceIcon"></i>
+                            </div>
+                            <div class="card-back"> I help small business owners start 
+                                their own journies with the help of a marketing / small business
+                                utility website.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <form id="contactModal" class="form">
+                <h5>Leave me a message</h5>
+                <input type="text" placeholder="Your Name" id="name" required>
+                <input type="email" placeholder="Your Email" id="email" required="true">
+                <textarea placeholder="And your message" id="message" required></textarea>
+                <button type="submit" id="submitMessage">Submit</button>
+            </form>
+        </main>
+        <footer>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-envelope"></i>
+                    Gmail</li>
+                <li>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    LinkedIn
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        Work: 435-554-5918
+                    </span>
+                </li>
+            </ul>
+        </footer>
+    </body>
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/cardAnimation.js"></script>
+    <script src="./js/modalLogic.js"></script>
+    <script src="./js/api/message.js"></script>
+</html>
