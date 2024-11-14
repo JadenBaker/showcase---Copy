@@ -3,6 +3,10 @@ const username = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     try {
@@ -12,7 +16,7 @@ form.addEventListener('submit', async (e) => {
             message: message.value
         };
         console.log(data, ' data pre fetch ')
-        const res = await fetch('http://localhost:8080/message', {
+        const res = await fetch(`${apiUrl}/message`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

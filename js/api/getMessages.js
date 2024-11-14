@@ -1,8 +1,12 @@
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 const feedElement = document.getElementById('feed');
 
 async function fetchMessages() {
     try {
-        let res = await fetch('http://localhost:8080/messages', {
+        let res = await fetch(`${apiUrl}/messages`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

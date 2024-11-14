@@ -154,9 +154,13 @@ window.addEventListener('scroll', () => {
     else if (window.scrollY <= heightOfScreen) header.style.opacity = 0.85;
 });
 
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 async function FetchProjects() {
     try {
-        const response = await fetch('http://localhost:8080/projects', {
+        const response = await fetch(`${apiUrl}/projects`, {
             method: 'GET',
         });
         const data = await response.json();

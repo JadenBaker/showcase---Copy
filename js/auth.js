@@ -15,9 +15,13 @@ loginForm.addEventListener('submit', async (e) => {
     }
 });
 
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 async function FetchProjects() {
   try {
-      const response = await fetch('http://localhost:8080/projects');
+      const response = await fetch(`${apiUrl}/projects`);
       return await response.json();
   } catch (error) {
       console.error('Error fetching projects:', error);
@@ -53,7 +57,7 @@ function UpdateAuth() {
 
 async function fetchMessages() {
     try {
-        const response = await fetch('http://localhost:8080/messages');
+        const response = await fetch(`${apiUrl}/messages`);
         return await response.json();
     } catch (error) {
         console.error('Error fetching messages:', error);
@@ -104,7 +108,7 @@ function renderProjects(projects) {
 
             removeButton.addEventListener('click', async () => {
             try {
-                const response = await fetch(`http://localhost:8080/project/${encodeURIComponent(project[0])}`, {
+                const response = await fetch(`${apiUrl}/project/${encodeURIComponent(project[0])}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -135,7 +139,7 @@ function renderProjects(projects) {
 
 async function createUpdateFunctionality(projectId) {
     try {
-        const response = await fetch(`http://localhost:8080/project/${encodeURIComponent(projectId)}`, {
+        const response = await fetch(`${apiUrl}/project/${encodeURIComponent(projectId)}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
@@ -240,7 +244,7 @@ function createNewProjectModal() {
       console.log(data, ' form data from auth');
         
       try {
-        const response = await fetch('http://localhost:8080/createproject', {
+        const response = await fetch(`${apiUrl}/createproject`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -380,7 +384,7 @@ function createUpdateModal(project) {
         const data = Object.fromEntries(formData.entries());
         
         try {
-            const response = await fetch(`http://localhost:8080/project/${encodeURIComponent(project?.id)}`, {
+            const response = await fetch(`${apiUrl}/project/${encodeURIComponent(project?.id)}`, {
                 method: 'PUT',
                 headers: { 
                     'Content-Type': 'application/json',
