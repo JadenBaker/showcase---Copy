@@ -1,6 +1,6 @@
-Please text me or email me the website url.
-@bakerjadenc@gmail.com
-435-554-5918
+Please text me or email me the website url. \n
+@bakerjadenc@gmail.com \n
+@435-554-5918 \n
 
 The code is ready for hosting with the following lines of code
 
